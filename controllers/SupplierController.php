@@ -149,7 +149,7 @@ class SupplierController extends Controller
         header("Content-Type: application/download");
 
         $output = fopen( 'php://output', 'w' );
-        $headers = array('id', 'name', 'code', 't_status');
+        $headers = array('ID', 'Came', 'Code', 'T Status');
         fputcsv($output, $headers);
 
         $datas = $dataProvider->getModels();

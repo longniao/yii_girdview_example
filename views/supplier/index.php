@@ -19,8 +19,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Supplier', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::button('Export To CSV', array('id'=>'exportBtn','class'=>'btn btn-secondary', 'disabled'=>'disabled')); ?>
+        <?= Html::a('Create Supplier', ['create'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::button('Export', array('id'=>'exportBtn','class'=>'btn btn-primary', 'disabled'=>'disabled')); ?>
     </p>
 
     <?php Pjax::begin(); ?>
@@ -57,6 +57,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //                    return Url::toRoute([$action, 'id' => $model->id]);
 //                 }
 //            ],
+
         ],
     ]); ?>
 

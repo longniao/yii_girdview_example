@@ -3,15 +3,16 @@
 /** @var yii\web\View $this */
 
 $this->title = 'My Yii Application';
+$supplierUrl = yii\helpers\Url::to(["/supplier/index"]);
 ?>
 <div class="site-index">
 
     <div class="jumbotron text-center bg-transparent">
-        <h1 class="display-4">Congratulations!</h1>
+        <h1 class="display-4">Yii 2 Girdview Example</h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <p class="lead">The example contains the basic features of gridview widget.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <p><a class="btn btn-lg btn-success" href="<?=$supplierUrl; ?>">Get started</a></p>
     </div>
 
     <div class="body-content">

@@ -13,6 +13,17 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
         '@tests' => '@app/tests',
     ],
+    'container' => [
+        'definitions' => [
+            'yii\widgets\LinkPager' => [
+                'maxButtonCount' => 6,
+                'options' => [
+                    'tag' => 'li',
+                    'class' => 'page-item',
+                ]
+            ],
+        ],
+    ],
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
