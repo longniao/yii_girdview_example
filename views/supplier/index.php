@@ -18,12 +18,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
+    <?php Pjax::begin(); ?>
+
     <p>
         <?= Html::a('Create Supplier', ['create'], ['class' => 'btn btn-primary']) ?>
         <?= Html::button('Export', array('id'=>'exportBtn','class'=>'btn btn-primary', 'disabled'=>'disabled')); ?>
     </p>
-
-    <?php Pjax::begin(); ?>
 
     <div id="prompt" class="alert alert-secondary" style="display: none"><span></span> <a id="selectAll" href="javascript:;"></a></div>
 
@@ -40,23 +40,15 @@ $this->params['breadcrumbs'][] = $this->title;
                     return ['value' => $model->id];
                 }
             ],
-//            ['class' => 'yii\grid\SerialColumn'],
 
             'id',
             'name',
             'code',
-//            't_status',
             [
                 'attribute'=>'t_status',
                 'filter'=>ArrayHelper::map($searchModel::find()->asArray()->all(), 't_status', 't_status'),
                 'filterInputOptions' => ['prompt' => 'All status', 'class' => 'form-control', 'id' => null],
             ],
-//            [
-//                'class' => ActionColumn::className(),
-//                'urlCreator' => function ($action, $model, $key, $index, $column) {
-//                    return Url::toRoute([$action, 'id' => $model->id]);
-//                 }
-//            ],
 
         ],
     ]); ?>

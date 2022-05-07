@@ -119,6 +119,8 @@ class SupplierSearch extends Supplier
 
         } else {
 
+            $id = empty($params['id']) ? [0]:$params['id'];
+
             $query = Supplier::find();
 
             $dataProvider = new ActiveDataProvider([
@@ -126,7 +128,7 @@ class SupplierSearch extends Supplier
                 'pagination' => false,
             ]);
 
-            $query->andFilterWhere(['in', 'id', $params['id']]);
+            $query->andFilterWhere(['in', 'id', $id]);
 
         }
 
