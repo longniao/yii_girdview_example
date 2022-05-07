@@ -72,3 +72,17 @@ return [
     'charset' => 'utf8',
 ];
 ```
+
+
+INSTALL
+-------
+
+```
+git clone git@github.com:longniao/yii_girdview_example.git
+
+cd yii_girdview_example
+
+composer install
+
+php yii serve
+```
