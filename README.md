@@ -41,6 +41,9 @@ CREATE TABLE `supplier` (
 INSERT INTO `supplier` VALUES (1,'Afghanistan','af','ok'),(2,'Åland','ax','ok'),(3,'Albania','al','ok'),(4,'Algeria','dz','ok'),(5,'American Samoa','as','ok'),(6,'Andorra','ad','ok'),(7,'Angola','ao','hold'),(8,'Anguilla','ai','ok'),(9,'Antarctica','aq','ok'),(10,'Antigua and Barbuda','ag','ok'),(11,'Argentina','ar','ok'),(12,'Armenia','am','ok'),(13,'Aruba','aw','ok'),(14,'Ascension Island','ac','hold'),(15,'Australia','au','ok'),(16,'Austria','at','ok'),(17,'Azerbaijan','az','ok'),(18,'Bahamas','bs','ok'),(19,'Bahrain','bh','ok'),(20,'Bangladesh','bd','ok'),(21,'Barbados','bb','ok'),(22,'Basque Country','eu','hold'),(23,'Belarus','by','ok'),(24,'Belgium','be','ok'),(25,'Belize','bz','ok'),(26,'Benin','bj','ok'),(27,'Bermuda','bm','ok'),(28,'Bhutan','bt','ok'),(29,'Bolivia','bo','ok'),(30,'Bonaire','bq','ok'),(31,'Bosnia and Herzegovina','ba','ok'),(32,'Botswana','bw','ok'),(33,'Bouvet Island','bv','ok'),(34,'Brazil','br','ok'),(35,'British Indian Ocean Territory','io','ok'),(36,'British Virgin Islands','vg','ok'),(37,'Brunei','bn','ok'),(38,'Bulgaria','bg','ok'),(39,'Burkina Faso','bf','ok'),(40,'Burma (officially: Myanmar)','mm','ok'),(41,'Burundi','bi','ok');
 ```
 
+Here's the .SQL file for import: [**yii2basic.sql**](./docs/yii2basic.sql)
+
+
 
 FEATURES
 --------
@@ -74,7 +77,7 @@ return [
 ```
 
 
-INSTALL
+INSTALLATION
 -------
 
 ```
