@@ -28,6 +28,7 @@ class Supplier extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['name', 'code', 't_status'], 'required'],
             [['t_status'], 'string'],
             [['name'], 'string', 'max' => 50],
             [['code'], 'string', 'max' => 3],
