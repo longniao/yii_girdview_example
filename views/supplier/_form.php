@@ -19,7 +19,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 't_status')->dropDownList([ 'ok' => 'Ok', 'hold' => 'Hold', ], ['prompt' => '']) ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Save', ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton('Reset', ['class' => 'btn btn-secondary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use Yii;
 use app\models\Supplier;
 use app\models\SupplierSearch;
 use yii\web\Controller;
@@ -70,9 +71,22 @@ class SupplierController extends Controller
         $model = new Supplier();
 
         if ($this->request->isPost) {
-            if ($model->load($this->request->post()) && $model->save()) {
+
+            $post = $this->request->post();
+            $code = $post['Supplier']['code'];
+            $model->load($post);
+
+            $checkCode = Supplier::findOne(['code' => $code]);
+
+            if (!empty($checkCode)) {
+
+                Yii::$app->session->setFlash('error', "The code already exists in the system.");
+
+            } elseif ($model->save()) {
+
                 return $this->redirect(['view', 'id' => $model->id]);
             }
+
         } else {
             $model->loadDefaultValues();
         }

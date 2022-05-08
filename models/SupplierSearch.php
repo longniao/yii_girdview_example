@@ -73,7 +73,7 @@ class SupplierSearch extends Supplier
      *
      * @param $id
      */
-    private function compareId($query, $id=null) {
+    protected function compareId($query, $id=null) {
 
         if (empty($id)) {
             return $query;

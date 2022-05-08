@@ -56,4 +56,5 @@ class Supplier extends \yii\db\ActiveRecord
     {
         return new SupplierQuery(get_called_class());
     }
+
 }
