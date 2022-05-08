@@ -33,6 +33,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'id' => 'grid',
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'tableOptions' => ['class' => 'table table-striped table-hover'],
+        'pager'=>[
+            'firstPageLabel'=>"First",
+            'prevPageLabel'=>'Previous',
+            'nextPageLabel'=>'Next',
+            'lastPageLabel'=>'Last',
+        ],
         'columns' => [
             [
                 'class' => 'yii\grid\CheckboxColumn',
@@ -78,6 +85,11 @@ $(document).ready(function(){
             $('#exportBtn').removeAttr('disabled');
         } else {
             $('#exportBtn').attr('disabled','disabled');
+        }
+    });
+    $('.table tbody tr').click(function(event) {
+        if (event.target.type !== 'checkbox') {
+            $(':checkbox', this).trigger('click');
         }
     });
     $("input.select-on-check-all").on("change", function() {

@@ -1,0 +1,13 @@
+/* page */
+.page-item.disabled {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+/* table */
+.grid-view table > tbody > tr {
+    cursor: pointer;
+}
