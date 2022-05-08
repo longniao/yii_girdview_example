@@ -64,17 +64,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
     $registerJS = <<<registerJS
 $(document).ready(function(){
-    function setDanger(){
-        $("#prompt").removeClass("alert-secondary");
-        $("#prompt").addClass("alert-danger");
+    function showSelectAll(){
         $("#prompt > span").html("All " + selectedCount + " suppliers on this page have been selected.");
         $("#selectAll").html("Select all suppliers that match this search.");
     }
-    function setSecondary(){
-        $("#prompt").removeClass("alert-danger");
-        $("#prompt").addClass("alert-secondary");
+    function showClearSelection(){
         $("#prompt > span").html("All suppliers in this search have been selected.");
-        $("#selectAll").html("clear selection");
+        $("#selectAll").html("Clear selection");
     }
     $("input:checkbox").on("change", function() {
         var keys = $("#grid").yiiGridView("getSelectedRows");
@@ -89,11 +85,11 @@ $(document).ready(function(){
             var keys = $("#grid").yiiGridView("getSelectedRows");
             selectedCount = keys.length;
             if (totalCount > selectedCount) {
-                setDanger();
+                showSelectAll();
                 $("#prompt").show();
             }
         } else {
-            setSecondary();
+            showClearSelection();
             $("#prompt > span").html("");
             $("#prompt").hide();
         }
@@ -102,9 +98,9 @@ $(document).ready(function(){
     $("#selectAll").unbind('click').on("click", function() {
         selectAll = !selectAll;
         if (selectAll) {
-            setSecondary();
+            showClearSelection();
         } else {
-            setDanger();
+            showSelectAll();
         }
     });
 
